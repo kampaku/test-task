@@ -1,0 +1,19 @@
+.app {
+  display: grid;
+  grid-template-columns: auto 150px 550px auto;
+  grid-template-areas: '. aside main .';
+  column-gap: 30px;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.aside {
+  grid-area: aside;
+  background-color: #BDBDBD;
+}
+
+.main {
+  grid-area: main;
+}
