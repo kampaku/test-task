@@ -1,0 +1,35 @@
+.form {
+  padding: 20px 12px;
+}
+
+.formHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fieldset {
+  display: grid;
+  row-gap: 10px;
+  border: 1px solid #F3F3F3;
+  border-radius: 8px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.comment {
+  resize: none;
+  font-size: 16px;
+  border: 1px solid #D8D8D8;
+  border-radius: 8px;
+}
+
+.buttonSubmit {
+  width: fit-content;
+  margin-left: auto;
+  margin-top: 15px;
+}
