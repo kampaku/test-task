@@ -1,17 +1,17 @@
 import React from 'react';
 
-import Sort from '../Sort/Sort';
+import Sort from '../SortUser/SortUser';
 
 interface SideBarProp {
   setSort: (arr: string[]) => void;
 }
 
-const Sidebar: React.FC<SideBarProp> = ({setSort}) => {
+const Sidebar: React.FC<SideBarProp> = ({ setSort }) => {
   return (
     <aside>
-      <Sort setSort={setSort}/>
+      <Sort setSort={setSort} />
     </aside>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;
