@@ -1,0 +1,18 @@
+.label {
+  display: flex;
+  flex-direction: column;
+  max-width: 210px;
+  font-size: 14px;
+  row-gap: 5px;
+}
+
+.input {
+  border: 1px solid #D8D8D8;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 16px;
+
+  &:invalid {
+    border-color: #D91313;
+  }
+}
