@@ -21,22 +21,22 @@ const App: React.FC = () => {
   const api = new Api();
 
   function getProp<T extends object>(obj: T, pathToProp: string[]): string {
-    let aProp = obj;
+    let nestedObj = obj;
     let prop = '';
 
     for (const key of pathToProp) {
-      if (typeof aProp[key as keyof T] === 'object') {
-        aProp = aProp[key as keyof object];
-      } else if (typeof aProp[key as keyof T] === 'string') {
-        prop = aProp[key as keyof object];
+      if (typeof nestedObj[key as keyof T] === 'object') {
+        nestedObj = nestedObj[key as keyof object];
+      } else if (typeof nestedObj[key as keyof T] === 'string') {
+        prop = nestedObj[key as keyof object];
       }
     }
     return prop;
   }
 
-  const setSort = (sortType: string[]) => {
+  const setSort = (pathToProp: string[]) => {
     const newUsers = [...users].sort((a, b) =>
-      getProp(a, sortType).localeCompare(getProp(b, sortType))
+      getProp(a, pathToProp).localeCompare(getProp(b, pathToProp))
     );
     setUsers(newUsers);
   };
